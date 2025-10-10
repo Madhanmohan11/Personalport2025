@@ -22,7 +22,7 @@ const Skills = () => {
       skills: [
         { name: 'Tailwind CSS', level: 95 },
         { name: 'Styled Components', level: 85 },
-        { name: 'SASS/SCSS', level: 90 },
+        // { name: 'SASS/SCSS', level: 90 },
         { name: 'CSS Modules', level: 85 },
         // { name: 'Figma', level: 80 },
         // { name: 'Adobe XD', level: 75 }
@@ -45,7 +45,7 @@ const Skills = () => {
       skills: [
          { name: 'MySQL', level: 70 },
          { name: 'Firebase', level: 80 },
-        { name: 'Node.js', level: 60 },
+        // { name: 'Node.js', level: 60 },
         // { name: 'Express.js', level: 70 },
         // { name: 'MongoDB', level: 75 },
         // { name: 'PostgreSQL', level: 70 },
@@ -55,7 +55,7 @@ const Skills = () => {
   ];
 
   const tools = [
-    'HTML5','CSS3','React.Js', 'JavaScript','Node.js','Tailwind CSS', 'Framer Motion',
+    'HTML5','CSS3','React.Js', 'JavaScript', 'Tailwind CSS', 'Framer Motion',
     'Redux', 'Firebase','Netlify', 'Vercel', 'Git',
     'GitHub'
       
