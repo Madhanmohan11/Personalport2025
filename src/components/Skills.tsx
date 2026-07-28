@@ -7,58 +7,36 @@ const Skills = () => {
     {
       title: 'Frontend Technologies',
       skills: [
-         { name: 'HTML5', level: 95 },
-        { name: 'CSS3', level: 90 },
-        { name: 'React', level: 75 },
-        // { name: 'TypeScript', level: 90 },
-        { name: 'JavaScript', level: 60 },
-        // { name: 'Next.js', level: 85 },
-        // { name: 'Vue.js', level: 80 }
-       
-      ]
-    },
-    {
-      title: 'Styling & Design',
-      skills: [
-        { name: 'Tailwind CSS', level: 95 },
-        { name: 'Styled Components', level: 85 },
-        // { name: 'SASS/SCSS', level: 90 },
-        { name: 'CSS Modules', level: 85 },
-        // { name: 'Figma', level: 80 },
-        // { name: 'Adobe XD', level: 75 }
-      ]
-    },
-    {
-      title: 'Tools & Workflow',
-      skills: [
-        { name: 'Git', level: 80 },
-         { name: 'GitHub', level: 75 },
-        { name: 'Webpack', level: 60 },
-        { name: 'Vite', level: 75 },
-        { name: 'VS Code', level: 80 },
-        { name: 'Canva', level: 65 },
-        { name: 'Netlify', level: 80 }
+        { name: 'HTML/CSS', level: 85 },
+        { name: 'React.js', level: 80 },
+        { name: 'JavaScript', level: 80 },
+        { name: 'PrimeReact / Mantine', level: 70 },
       ]
     },
     {
       title: 'Backend & Database',
       skills: [
-         { name: 'MySQL', level: 70 },
-         { name: 'Firebase', level: 80 },
-        // { name: 'Node.js', level: 60 },
-        // { name: 'Express.js', level: 70 },
-        // { name: 'MongoDB', level: 75 },
-        // { name: 'PostgreSQL', level: 70 },
-        { name: 'Supabase', level: 65 }
+        { name: 'Node.js', level: 70 },
+        { name: 'Express.js', level: 70 },
+        { name: 'MongoDB', level: 65 },
+        { name: 'Firebase', level: 65 },
+        { name: 'REST APIs', level: 75 }
+      ]
+    },
+    {
+      title: 'Tools & Workflow',
+      skills: [
+        { name: 'Git/GitHub', level: 75 },
+        { name: 'Postman', level: 70 },
+        { name: 'Agile/Jira', level: 75 },
+        { name: 'Tailwind CSS', level: 80 }
       ]
     }
   ];
 
   const tools = [
-    'HTML5','CSS3','React.Js', 'JavaScript', 'Tailwind CSS', 'Framer Motion',
-    'Redux', 'Firebase','Netlify', 'Vercel', 'Git',
-    'GitHub'
-      
+    'HTML5','CSS3','React.js', 'Node.js', 'Express.js', 'MongoDB', 'JavaScript', 'Tailwind CSS',
+    'Firebase', 'REST APIs', 'Git', 'GitHub', 'Postman', 'Jira'
   ];
 
   return (

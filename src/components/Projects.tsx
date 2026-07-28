@@ -1,215 +1,196 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
-import { Button } from './ui/button';
-import { Card, CardContent } from './ui/card';
+import { ExternalLink, Layers } from 'lucide-react';
 import { Badge } from './ui/badge';
 
 // Import project images
 import healthyBitesImg from '../assets/Startup.png';
+import zyrixinfra from '../assets/zyrixinfra.jpeg';
 import Villa from '../assets/Villa.png';
 import ecommerceImg from '../assets/intern-pho.png';
-import taskManagerImg from '../assets/Food.png';
-import weatherImg from '../assets/Weather.png';
-import blogImg from '../assets/Game.png';
-import Task from '../assets/Taskm.png';
-import socialImg from '../assets/Mattube.png';
 
 const Projects = () => {
   const projects = [
     {
-      id: 1,
-      title: 'Healthy Bites – Food Ordering Platform',
+      id: 0,
+      title: 'Zyrix Infra',
+      subtitle: 'UK Solar Energy Company Website',
       description:
-        'A web-based application built for a food startup promoting healthy breakfast habits and fruit-rich meals. Features include WhatsApp ordering, an admin dashboard, and Excel export for managing orders.',
+        'A professional website for a UK-based solar energy company built with the MERN stack, showcasing their high-fidelity engineering services and solar solutions.',
+      image: zyrixinfra,
+      technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
+      liveUrl: 'https://www.zyrixinfra.com/',
+      category: 'MERN Stack',
+      color: 'from-green-500/20 to-emerald-500/10',
+      accent: 'bg-green-500',
+    },
+    {
+      id: 1,
+      title: 'Mercufy',
+      subtitle: 'Workforce Management SaaS',
+      description:
+        'A comprehensive SaaS platform with HR, Payroll, Project Management, and Time Tracking modules built for scalable business operations.',
+      image: healthyBitesImg,
+      technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs'],
+      liveUrl: '#',
+      category: 'SaaS Platform',
+      color: 'from-blue-500/20 to-cyan-500/10',
+      accent: 'bg-blue-500',
+    },
+    {
+      id: 2,
+      title: 'Healthy Bites',
+      subtitle: 'Food Ordering Platform',
+      description:
+        'A web app for a food startup promoting healthy meals, featuring WhatsApp ordering integration, an admin dashboard, and Excel export for order management.',
       image: healthyBitesImg,
       technologies: ['React.js', 'Tailwind CSS', 'WhatsApp API', 'SheetJS', 'Netlify'],
       liveUrl: 'https://storied-rugelach-febbd7.netlify.app/',
-      githubUrl: 'https://github.com/YourUsername/healthy-bites',
-      featured: true,
-    },
-   {
-      id: 2,
-      title: 'Madras Villa – Your Home Away From Home',
-      description:
-        'A fully responsive resort web application built for Madras Villa to showcase its peaceful and scenic stay experience. Features include a photo-rich gallery, real-time booking form, customer testimonials, and a contact section with location details. Designed to provide a mobile-first, relaxing user experience and help grow the resort’s online presence.',
-      image: Villa,
-      technologies: ['React.js', 'Tailwind CSS', 'Firebase', 'React Router', 'React Context API'],
-      liveUrl: 'https://madrasvilla.netlify.app/',
-      githubUrl: 'https://github.com/Madhanmohan11/unibritend',
-      featured: true,
+      category: 'Web Application',
+      color: 'from-orange-500/20 to-yellow-500/10',
+      accent: 'bg-orange-500',
     },
     {
       id: 3,
-      title: 'Study Abroad Guidance Platform',
-      description: 'Developed during my internship at UNI BRITIND GLOBAL UK for planning higher education abroad.',
-      image: ecommerceImg,
-      technologies: ['React','Javascript', 'Firebase', 'Tailwind CSS'],
-      liveUrl: 'https://unibritend.vercel.app/',
-      githubUrl: 'https://github.com/Madhanmohan11/unibritend',
-      featured: true,
+      title: 'Madras Villa',
+      subtitle: 'Resort Booking Website',
+      description:
+        'A fully responsive resort website with a photo-rich gallery, real-time booking form, customer testimonials, and a contact section with location details.',
+      image: Villa,
+      technologies: ['React.js', 'Tailwind CSS', 'Firebase', 'React Router'],
+      liveUrl: 'https://madrasvilla.netlify.app/',
+      category: 'React + Firebase',
+      color: 'from-purple-500/20 to-pink-500/10',
+      accent: 'bg-purple-500',
     },
     {
       id: 4,
-      title: 'Online Food Ordering App',
-      description: 'My first project — a food ordering site with a responsive UI.',
-      image: taskManagerImg,
-      technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
-      liveUrl: 'https://of-delivery.netlify.app/',
-      githubUrl: 'https://github.com/Madhanmohan11/Online-food-delivery',
-      featured: false,
+      title: 'Uni Britind Global',
+      subtitle: 'Study Abroad Guidance Platform',
+      description:
+        'Developed during my internship at UNI BRITIND GLOBAL UK — a platform helping students plan and navigate higher education abroad.',
+      image: ecommerceImg,
+      technologies: ['React.js', 'JavaScript', 'Firebase', 'Tailwind CSS'],
+      liveUrl: 'https://unibritend.vercel.app/',
+      category: 'Internship Project',
+      color: 'from-rose-500/20 to-red-500/10',
+      accent: 'bg-rose-500',
     },
-    {
-      id: 5,
-      title: 'Live Weather App',
-      description: 'A live weather app giving real-time updates using OpenWeather API.',
-      image: weatherImg,
-      technologies: ['HTML', 'CSS', 'JAVASCRIPT', 'OpenWeather API'],
-      liveUrl: 'https://madhanweatherapp.netlify.app/',
-      githubUrl: 'https://github.com/Madhanmohan11/Live-Weather-Forecast-main',
-      featured: false,
-    },
-    {
-      id: 6,
-      title: 'X-O-X Tic Tac Toe Game',
-      description: 'A simple multiplayer Tic Tac Toe game for fun and relaxation.',
-      image: blogImg,
-      technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
-      liveUrl: 'https://x-o-x-tic-game.netlify.app/',
-      githubUrl: 'https://github.com/Madhanmohan11/Tic-Tack-Toe',
-      featured: false,
-    },
-    {
-      id: 7,
-      title: 'Task Management App',
-      description: 'This application is designed for task assignment and daily note-taking. It allows users to create, assign, and manage tasks efficiently.',
-      image: Task,
-      technologies: ['HTML', 'CSS', 'JQuery', 'JavaScript'],
-      liveUrl: 'https://taskma.netlify.app/',
-      githubUrl: 'https://github.com',
-      featured: false,
-    },
-    {
-      id: 8,
-      title: 'Youtube Clone',
-      description: 'This is a YouTube clone and  It is fully responsive, includes active video links, and features a side menu list for easy navigation. ',
-      image: socialImg,
-      technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
-      liveUrl: 'https://clone-madtube.netlify.app/',
-      githubUrl: 'https://github.com',
-      featured: false,
-    }
   ];
 
-  // Sort by id to ensure correct order
   const sortedProjects = [...projects].sort((a, b) => a.id - b.id);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 }
-  };
-
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-muted/30 to-background">
+    <section id="projects" className="py-24 bg-background">
       <div className="container mx-auto px-6">
+
+        {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Projects</h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my recent work and the technologies I've used to bring ideas to life
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
+            <Layers size={14} />
+            My Work
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
+            Featured Projects
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-6 rounded-full" />
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+            A curated showcase of real-world applications I have built, from SaaS platforms to client websites.
           </p>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {sortedProjects.map((project) => (
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {sortedProjects.map((project, index) => (
             <motion.div
               key={project.id}
-              variants={itemVariants}
-              className={`${project.featured ? 'lg:col-span-2' : ''}`}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group relative rounded-2xl overflow-hidden border border-white/10 bg-card/60 backdrop-blur-sm hover:border-primary/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 flex flex-col"
             >
-              <Card className="group hover-lift h-full overflow-hidden dark-card transition-all duration-500">
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  {project.featured && (
-                    <div className="absolute top-4 left-4">
-                      <Badge className="neon-glow bg-gradient-to-r from-primary to-accent text-black font-bold">
-                        ⭐ Featured
-                      </Badge>
-                    </div>
-                  )}
+              {/* Gradient top accent */}
+              <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${project.color.replace('/20', '').replace('/10', '')} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+              {/* Image with overlay */}
+              <div className="relative overflow-hidden h-48 flex-shrink-0">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                {/* Dark overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+
+                {/* Category badge top right */}
+                <div className="absolute top-3 right-3">
+                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-black/50 backdrop-blur-sm text-white border border-white/20">
+                    {project.category}
+                  </span>
                 </div>
 
-                <CardContent className="p-6 bg-card/80 backdrop-blur-sm">
-                  <h3 className="text-2xl font-bold mb-3 gradient-text group-hover:animate-pulse transition-all duration-300">
+                {/* Live Demo button slides up on hover */}
+                {project.liveUrl !== '#' && (
+                  <div className="absolute bottom-4 left-0 right-0 flex justify-center translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-400">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary text-black font-semibold text-sm hover:bg-primary/90 transition-colors duration-200 shadow-lg shadow-primary/30"
+                    >
+                      <ExternalLink size={14} />
+                      Visit Live Site
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              {/* Card Content */}
+              <div className="p-5 flex flex-col flex-1">
+                {/* Title & Subtitle */}
+                <div className="mb-3">
+                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
+                  <p className="text-sm text-primary/70 font-medium">{project.subtitle}</p>
+                </div>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.3, delay: index * 0.1 }}
-                        whileHover={{ scale: 1.1, y: -2 }}
-                      >
-                        <Badge 
-                          variant="outline" 
-                          className="text-xs border-primary/30 hover:border-primary hover:neon-glow transition-all duration-300 bg-primary/5"
-                        >
-                          {tech}
-                        </Badge>
-                      </motion.div>
-                    ))}
-                  </div>
+                {/* Description */}
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
+                  {project.description}
+                </p>
 
-                  <div className="flex space-x-3">
-                    <Button variant="default" size="sm" asChild className="flex-1 neon-glow hover:scale-105 transition-all duration-300">
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink size={16} className="mr-2" />
-                        Live Demo
-                      </a>
-                    </Button>
-                    <Button variant="outline" size="sm" asChild className="flex-1 border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300">
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github size={16} className="mr-2" />
-                        Code
-                      </a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                  {project.technologies.map((tech, i) => (
+                    <Badge
+                      key={i}
+                      variant="outline"
+                      className="text-xs px-2 py-0.5 border-primary/20 text-muted-foreground hover:border-primary hover:text-primary transition-colors duration-200 bg-primary/5"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+
+              {/* Bottom CTA strip for no-link projects */}
+              {project.liveUrl === '#' && (
+                <div className="px-5 pb-4">
+                  <span className="text-xs text-muted-foreground/60 italic">
+                    🔒 Private / Internal Project
+                  </span>
+                </div>
+              )}
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

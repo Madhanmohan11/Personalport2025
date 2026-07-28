@@ -7,15 +7,27 @@ import { Badge } from './ui/badge';
 const Resume = () => {
   const experience = [
     {
+      title: 'Junior Full Stack Developer',
+      company: 'Mercu',
+      location: 'Remote',
+      period: 'Aug 2025 – Present',
+      achievements: [
+        'Built full-stack features using React.js, Node.js, Express.js, and MongoDB for scalable business solutions.',
+        'Integrated REST APIs, implemented reusable UI components, and optimized application performance.',
+        'Contributed to feature development, bug fixing, testing, and production deployments across multiple projects.',
+        'Participated in Agile sprints, code reviews, and team discussions to deliver high-quality software.'
+      ]
+    },
+    {
       title: 'Web Developer Intern',
-      company: 'Uni Britind Global Pvt Ltd (Ernestwell Business Solutions)',
+      company: 'Uni Britind Global Pvt Ltd',
       location: 'Remote',
       period: 'Nov 2024 – Feb 2025',
       achievements: [
-        'Developed and maintained frontend and backend features for full-stack applications.',
-        'Designed responsive UI using React.js, aligning with modern accessibility and UX principles.',
-        'Implemented React Router and reusable components with hooks like useState and useEffect.',
-        'Worked in Agile sprints, contributed to code reviews, and resolved bugs collaboratively.'
+        'Built full-stack features — React UI screens wired to Firebase Firestore for real-time data storage and retrieval.',
+        'Designed accessible, mobile-first interfaces aligned with UI/UX best practices, reducing QA usability issues by ~30%.',
+        'Created modular hook-based components (useState, useEffect) adopted across the codebase, reducing redundancy.',
+        'Participated in Agile ceremonies, code reviews, and cross-functional bug triage with cross-team collaboration.'
       ]
     },
     {

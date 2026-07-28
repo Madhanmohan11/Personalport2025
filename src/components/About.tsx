@@ -51,20 +51,17 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h3 className="text-3xl font-bold mb-6 text-foreground">
-              Passionate Frontend Developer
+              Passionate Full Stack Developer
             </h3>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                I'm a frontend developer skilled in building responsive, user-focused web interfaces using React.js, JavaScript, and modern UI technologies. 
-                I recently completed a full-stack internship where I developed and maintained scalable applications, working closely in Agile teams.
+                I am a results-driven Junior Full Stack Developer with hands-on experience in building and maintaining scalable web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).
               </p>
               <p>
-                From crafting portfolio sites to integrating APIs in live weather apps, I enjoy turning ideas into functional, accessible, and visually appealing web experiences. 
-                I take pride in writing clean, maintainable code and continuously improving through hands-on projects.
+                My passion for software development is rooted in solving real-world problems and creating intuitive, user-focused digital experiences. With a strong foundation in modern JavaScript and agile methodologies, I thrive in collaborative environments where I can contribute to business-critical product features.
               </p>
               <p>
-                I'm always curious about new tools and frameworks, and love contributing to real-world projects that make an impact.
-                Let's build something great together.
+                My approach to development prioritizes clean code, reusable architecture, and seamless user experiences. Whether I am architecting responsive user interfaces with React, integrating robust REST APIs, or optimizing application performance, I maintain a problem-solving mindset and a keen eye for detail.
               </p>
             </div>
             {/* Stats */}

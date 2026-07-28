@@ -10,9 +10,9 @@ const Hero = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   
   const titles = [
-    'Software Developer ',
-    'Frontend Enthusiast',
-    'React.js Specialist' 
+    'Junior Full Stack Developer',
+    'MERN Stack Specialist',
+    'Web Applications Builder' 
   ];
 
   useEffect(() => {
@@ -128,15 +128,13 @@ const Hero = () => {
               </span>
             </motion.div>
 
-            {/* Description */}
             <motion.p
               className="text-xl text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Passionate about creating beautiful, functional, and user-centered digital experiences. 
-              I bring ideas to life with modern web technologies and thoughtful design.
+              Specializing in the MERN stack to engineer high-performance, user-centric applications from database to deployment. Turning complex problems into clean, modular, and accessible digital experiences.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -175,7 +173,7 @@ const Hero = () => {
               {[
                 { icon: Github, href: 'https://github.com/Madhanmohan11', label: 'GitHub' },
                 { icon: Linkedin, href: 'https://www.linkedin.com/in/madhan-m-25094b204/', label: 'LinkedIn' },
-                { icon: Mail, href: 'mailto:madhan.mmano.com', label: 'Email' },
+                { icon: Mail, href: 'mailto:madhan.mmano@gmail.com', label: 'Email' },
               ].map(({ icon: Icon, href, label }) => (
                 <motion.a
                   key={label}
