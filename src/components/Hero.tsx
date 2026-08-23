@@ -8,17 +8,16 @@ import heroVideoMobile from '../assets/Hero_video-vocal-m.mp4';
 const Hero = () => {
   const desktopVideoRef = useRef<HTMLVideoElement | null>(null);
   const mobileVideoRef = useRef<HTMLVideoElement | null>(null);
-  const [showPlayButton, setShowPlayButton] = useState(false);
+  // Play button is visible from the initial load
+  const [showPlayButton, setShowPlayButton] = useState(true);
 
   useEffect(() => {
-    setShowPlayButton(false);
-
     // Always attempt unmuted audio playback on load/refresh
     const startAudioPlayback = () => {
       [desktopVideoRef.current, mobileVideoRef.current].forEach((video) => {
         if (video) {
           video.currentTime = 0;
-          video.muted = false; // Video ALWAYS plays with audio
+          video.muted = false; // Video ALWAYS attempts audio
           video.play().catch(() => {
             // If browser autoplay policy requires user gesture for audio, trigger unmuted audio on 1st interaction
             const handleFirstInteraction = () => {
@@ -40,20 +39,19 @@ const Hero = () => {
   }, []);
 
   const handleVideoEnded = () => {
-    // Show replay button once initial video playback finishes
     setShowPlayButton(true);
   };
 
   const handleReplay = () => {
-    // Replay video with audio on user click
+    // Replay video with unmuted audio on user click
     [desktopVideoRef.current, mobileVideoRef.current].forEach((video) => {
       if (video) {
         video.currentTime = 0;
-        video.muted = false; // Guaranteed unmuted audio playback
+        video.muted = false;
         video.play().catch(() => {});
       }
     });
-    setShowPlayButton(false);
+    setShowPlayButton(true);
   };
 
   const scrollToSection = (href: string) => {
@@ -66,7 +64,7 @@ const Hero = () => {
       id="home"
       className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#0d0303]"
     >
-      {/* 1. Desktop Video (16:9 format for lg screens) - Always attempts audio */}
+      {/* 1. Desktop Video (16:9 format for lg screens) */}
       <video
         ref={desktopVideoRef}
         className="hidden lg:block absolute inset-0 h-full w-full object-cover object-[86%_center] z-0 brightness-105 contrast-105"
@@ -77,7 +75,7 @@ const Hero = () => {
         <source src={heroVideoDesktop} type="video/mp4" />
       </video>
 
-      {/* 2. Mobile & Tablet Video (9:16 vertical format for mobile screens) - Always attempts audio */}
+      {/* 2. Mobile & Tablet Video (9:16 vertical format for mobile screens) */}
       <video
         ref={mobileVideoRef}
         className="block lg:hidden absolute inset-0 h-full w-full object-cover object-center z-0 brightness-105 contrast-105"
@@ -290,7 +288,7 @@ const Hero = () => {
         </motion.button>
       </motion.div>
 
-      {/* Replay Button - ONLY visible after video play completes (z-30) */}
+      {/* Play / Replay Button - ALWAYS visible from initial load */}
       <AnimatePresence>
         {showPlayButton && (
           <motion.div
@@ -302,7 +300,7 @@ const Hero = () => {
           >
             <motion.button
               onClick={handleReplay}
-              aria-label="Replay video"
+              aria-label="Play video"
               className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-tr from-[#B80000] to-[#FF1E1E] text-white flex items-center justify-center backdrop-blur-md shadow-[0_0_25px_rgba(255,30,30,0.8)] border border-white/40 hover:scale-110 active:scale-95 transition-all duration-300"
               whileHover={{ scale: 1.15 }}
               whileTap={{ scale: 0.95 }}
