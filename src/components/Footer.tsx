@@ -10,13 +10,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white py-12 relative">
+    <footer className="bg-[#0d0303] text-white py-12 relative border-t border-red-900/30">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FF1E1E' fill-opacity='0.15'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}
         />
       </div>
@@ -31,9 +31,12 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="text-center md:text-left"
           >
-            <h3 className="text-2xl font-bold mb-3">Madhan</h3>
-            <p className="text-white/80 leading-relaxed">
-              Frontend Developer passionate about creating beautiful, functional digital experiences.
+            <div className="flex items-center justify-center md:justify-start mb-3">
+              <span className="text-2xl font-bold text-white tracking-tight">Madhan</span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#FF1E1E] inline-block shadow-[0_0_12px_rgba(255,30,30,0.9)] ml-1" />
+            </div>
+            <p className="text-neutral-400 text-sm leading-relaxed max-w-sm">
+              Frontend & Full Stack Developer passionate about creating beautiful, scalable digital experiences.
             </p>
           </motion.div>
 
@@ -45,12 +48,13 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-center"
           >
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-sm font-bold uppercase tracking-wider text-red-400 mb-4">Quick Links</h4>
             <div className="flex flex-wrap justify-center gap-4">
               {[
                 { href: '#about', label: 'About' },
                 { href: '#skills', label: 'Skills' },
                 { href: '#projects', label: 'Projects' },
+                { href: '#resume', label: 'Resume' },
                 { href: '#contact', label: 'Contact' }
               ].map((link) => (
                 <button
@@ -59,9 +63,10 @@ const Footer = () => {
                     const element = document.querySelector(link.href);
                     element?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="text-white/80 hover:text-white transition-colors duration-300 hover:underline"
+                  className="text-neutral-300 hover:text-red-400 font-medium text-sm transition-colors duration-300 relative group py-1"
                 >
                   {link.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FF1E1E] to-[#FF4D4D] transition-all duration-300 group-hover:w-full" />
                 </button>
               ))}
             </div>
@@ -79,9 +84,9 @@ const Footer = () => {
               onClick={scrollToTop}
               variant="outline"
               size="sm"
-              className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:border-white"
+              className="bg-black/40 border-red-500/30 text-neutral-200 hover:text-white hover:border-red-500/70 hover:bg-red-950/40 backdrop-blur-md transition-all duration-300 shadow-md"
             >
-              <ArrowUp size={16} className="mr-2" />
+              <ArrowUp size={16} className="mr-2 text-red-400" />
               Back to Top
             </Button>
           </motion.div>
@@ -93,7 +98,7 @@ const Footer = () => {
           whileInView={{ opacity: 1, scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="border-t border-white/20 my-8"
+          className="border-t border-red-900/30 my-8"
         />
 
         {/* Copyright */}
@@ -104,14 +109,14 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center"
         >
-          <p className="text-white/80 flex items-center justify-center">
+          <p className="text-neutral-400 text-sm flex items-center justify-center">
             © {currentYear} Madhan. Made with{' '}
             <motion.span
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1, repeat: Infinity, ease: 'easeInOut' }}
-              className="mx-1"
+              animate={{ scale: [1, 1.25, 1] }}
+              transition={{ duration: 1.2, repeat: Infinity, ease: 'easeInOut' }}
+              className="mx-1.5 inline-block"
             >
-              <Heart size={16} className="text-red-400 fill-current" />
+              <Heart size={15} className="text-red-500 fill-red-500 drop-shadow-[0_0_8px_rgba(255,30,30,0.8)]" />
             </motion.span>
             using React & Tailwind CSS
           </p>
