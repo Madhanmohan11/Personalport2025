@@ -3,6 +3,7 @@ import { Download, Calendar, MapPin, Award } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
+import resumePdf from '../assets/Madhan_M.pdf';
 
 const Resume = () => {
   const experience = [
@@ -100,17 +101,18 @@ const Resume = () => {
             My professional experience, education, and certifications
           </p>
           <Button
+            asChild
             size="lg"
-            className="px-8 hover-glow"
-            onClick={() => {
-              const link = document.createElement('a');
-              link.href = '/src/assets/Resume_MM.pdf';
-              link.download = 'Madhan_Resume.pdf';
-              link.click();
-            }}
+            className="px-8 hover-glow cursor-pointer"
           >
-            <Download className="mr-2" size={20} />
-            Download Resume
+            <a
+              href={resumePdf}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Download className="mr-2" size={20} />
+              Download Resume
+            </a>
           </Button>
         </motion.div>
 

@@ -7,6 +7,8 @@ import healthyBitesImg from '../assets/Startup.png';
 import zyrixinfra from '../assets/zyrixinfra.jpeg';
 import Villa from '../assets/Villa.png';
 import ecommerceImg from '../assets/intern-pho.png';
+import spectrumSchoolImg from '../assets/spct.png';
+import zeloImg from '../assets/Zelo.png';
 
 const Projects = () => {
   const projects = [
@@ -19,35 +21,50 @@ const Projects = () => {
       image: zyrixinfra,
       technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
       liveUrl: 'https://www.zyrixinfra.com/',
-      category: 'MERN Stack',
+      category: 'Client Project',
       color: 'from-green-500/20 to-emerald-500/10',
       accent: 'bg-green-500',
     },
     {
       id: 1,
-      title: 'Mercufy',
-      subtitle: 'Workforce Management SaaS',
-      description:
-        'A comprehensive SaaS platform with HR, Payroll, Project Management, and Time Tracking modules built for scalable business operations.',
-      image: healthyBitesImg,
-      technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs'],
-      liveUrl: '#',
-      category: 'SaaS Platform',
-      color: 'from-blue-500/20 to-cyan-500/10',
-      accent: 'bg-blue-500',
+      title: 'Spectrum Matriculation Higher Secondary School',
+  subtitle: 'Modern School Website & Admission Portal',
+  description:
+    'Developed a modern, responsive school website for Spectrum Matriculation Higher Secondary School with admission information, academic calendar, events, campus highlights, contact forms, and email communication using EmailJS.',
+  image: spectrumSchoolImg,
+  technologies: [
+    'React.js',
+    'JavaScript',
+    'Tailwind CSS',
+    'EmailJS',
+    'Responsive Design'
+  ],
+  liveUrl: 'https://spectrummathss.com',
+  category: 'Client Project',
+  color: 'from-blue-500/20 to-indigo-500/10',
+  accent: 'bg-blue-500',
     },
     {
       id: 2,
-      title: 'Healthy Bites',
-      subtitle: 'Food Ordering Platform',
-      description:
-        'A web app for a food startup promoting healthy meals, featuring WhatsApp ordering integration, an admin dashboard, and Excel export for order management.',
-      image: healthyBitesImg,
-      technologies: ['React.js', 'Tailwind CSS', 'WhatsApp API', 'SheetJS', 'Netlify'],
-      liveUrl: 'https://storied-rugelach-febbd7.netlify.app/',
-      category: 'Web Application',
-      color: 'from-orange-500/20 to-yellow-500/10',
-      accent: 'bg-orange-500',
+      title: 'ZELO',
+  subtitle: 'Personal Life Management Application',
+  description:
+    'Developed ZELO, a mobile-first personal life management application that helps users organize and track expenses, tasks, reminders, notes, goals, calendar events, food, workouts, water intake, and sleep from a single platform. Built with React.js and Supabase with secure authentication, PostgreSQL database, Row Level Security, profile management, and customizable modules.',
+  image: zeloImg,
+  technologies: [
+    'React.js',
+    'JavaScript',
+    'Tailwind CSS',
+    'Supabase',
+    'PostgreSQL',
+    'Supabase Auth',
+    'RLS',
+    'Responsive Design'
+  ],
+  liveUrl: 'https://zelo-main.pages.dev/login',
+  category: 'Personal Product',
+  color: 'from-emerald-500/20 to-teal-500/10',
+  accent: 'bg-emerald-500',
     },
     {
       id: 3,
@@ -74,6 +91,19 @@ const Projects = () => {
       category: 'Internship Project',
       color: 'from-rose-500/20 to-red-500/10',
       accent: 'bg-rose-500',
+    },
+    {
+  id: 5,
+  title: 'Healthy Bites',
+      subtitle: 'Food Ordering Platform',
+      description:
+        'A web app for a food startup promoting healthy meals, featuring WhatsApp ordering integration, an admin dashboard, and Excel export for order management.',
+      image: healthyBitesImg,
+      technologies: ['React.js', 'Tailwind CSS', 'WhatsApp API', 'SheetJS', 'Netlify'],
+      liveUrl: 'https://storied-rugelach-febbd7.netlify.app/',
+      category: 'Web Application',
+      color: 'from-orange-500/20 to-yellow-500/10',
+      accent: 'bg-orange-500',
     },
   ];
 
